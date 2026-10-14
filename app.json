@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "cheangmoto",
+    "name": "ជាងម៉ូតូ",
     "slug": "cheangmoto",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -8,19 +8,27 @@
     "scheme": "cheangmoto",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "icon": "./assets/expo.icon"
+      "bundleIdentifier": "com.cheangmoto.app",
+      "supportsTablet": false,
+      "icon": {
+        "light": "./assets/images/icon-light.png",
+        "dark": "./assets/images/icon-dark.png"
+      },
+      "appleTeamId": "226KZXFN8Y"
     },
     "android": {
+      "package": "com.cheangmoto.app",
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#08152F",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
-        "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "softwareKeyboardLayoutMode": "resize",
+      "predictiveBackGestureEnabled": false,
+      "googleServicesFile": "./google-services.json"
     },
     "web": {
-      "output": "static",
+      "output": "single",
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
@@ -28,15 +36,33 @@
       [
         "expo-splash-screen",
         {
-          "backgroundColor": "#208AEF",
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 76
+          "backgroundColor": "#08152F"
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "ជាងម៉ូតូ ប្រើទីតាំងរបស់អ្នក ដើម្បីរកជាងម៉ូតូដែលនៅជិតបំផុត។"
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "ជាងម៉ូតូ ប្រើកាមេរ៉ា ដើម្បីស្កេនកូដ QR របស់ជាង។",
+          "recordAudioAndroid": false
         }
       ]
     ],
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "73c443fc-658a-43dd-adb7-92932bdc8940"
+      }
+    },
+    "owner": "oonepower"
   }
 }

@@ -41,3 +41,12 @@ example
 # generated native folders
 /ios
 /android
+
+# secrets
+.env
+.playwright-mcp/
+dev-qr.png
+
+# native projects are generated (CNG)
+ios/
+android/
